@@ -3,6 +3,13 @@
 
 
 angular service to connect to the [Spotify Web API](https://developer.spotify.com/web-api/)
+Responsive layout compatible with all sizes of device and all latest browsers
+Chrome: 58
+Firefox: 53
+Safari: 10.1
+Internet Explorer: 11
+IE-Edge
+Opera
 
 ## Usage
 
