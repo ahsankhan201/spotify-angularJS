@@ -1,0 +1,16 @@
+<div ng-hide="IsVisible"  autofocus>
+    <div class="modal-header" ng-controller="MainController" style="background:url({{item.images[0].url}});">
+        <img src="../public/img/Cross@2x.png" alt="Close" class="close" ng-click="closePopup();" />    
+        <h2 class="header-content">{{ item.name}}</h2>
+    </div>
+    <h4 class="modal-title">{{ subType}}</h4>
+    <ul>
+        <li class="service-list" ng-repeat="data in subResponse">        
+            <a href=""><img ng-if="data.images[0].url" ng-src="{{data.images[0].url}}" alt="Track" width="100" height="auto" /></a>
+            <h3>{{data.name}}</h3><br/>
+            <p>
+                Number of Market: {{data.available_markets.length}}
+            </P>
+        </li>    
+    </ul>
+</div>

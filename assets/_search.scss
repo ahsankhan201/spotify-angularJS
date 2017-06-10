@@ -1,0 +1,62 @@
+/*Search bar css*/
+
+.search-bar{
+    background-color: $light-black;
+    color:$white;
+    display: inline-block;
+    padding: 1% 0%;        
+    text-align:center;
+    width: 100%;
+    
+    .search{
+        background-color: $white;
+        margin: 0 auto;
+        padding: 0.4%;
+        width:50%;
+        @include border-radius(35px);
+
+        input[type="text"]{
+            border: none;            
+            height: 50px;
+            margin-left: 1%;
+            width: 76%;
+            @include border-radius(35px);
+        }
+        input[type="text"]:focus{
+            border: none;
+            outline: none;
+        }
+        button{
+             width: 22%;
+        }
+    }
+    span{
+        line-height: 57px;
+    }
+}
+
+/*Medium Layout*/
+@media #{$medium}  {
+.search-bar{
+        .search{
+            background: none;
+            width: 90%;            
+
+            input[type="text"]{
+                text-align: center;
+                width: 90%;                
+                @include border-radius(35px);
+            }
+            button{
+                margin-top: 10px;
+                width: 90%;                
+            }
+        }
+    }
+}
+/*cell phone layout*/
+@media #{$small} {
+    button{
+        width:90%;
+    }    
+}

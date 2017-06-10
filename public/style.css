@@ -1,0 +1,324 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 29, 2017, 2:47:36 PM
+    Author     : ahsan
+*/
+body {
+  margin: 0rem; }
+  body button {
+    background-color: #d05d84;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    height: 50px;
+    min-width: 15%;
+    text-transform: uppercase;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    border-radius: 35px; }
+  body button:focus {
+    background-color: #d04473;
+    outline: none; }
+  body button:hover {
+    background-color: #d04473; }
+
+/*Header Css*/
+.header {
+  background-color: #d05d84;
+  color: #ffffff;
+  padding-top: 25px;
+  text-align: center; }
+  .header .top-icon {
+    width: 100%; }
+    .header .top-icon .right-icon {
+      float: right;
+      margin-right: 2%; }
+    .header .top-icon .left-icon {
+      float: left;
+      margin-left: 2%; }
+  .header .center-img img {
+    width: 50%; }
+  .header .arrow img {
+    height: 60px; }
+
+/*Medium Layout*/
+@media (max-width: 800px) {
+  .header .top-icon .right-icon, .header .top-icon .left-icon {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%; } }
+/*cell phone layout*/
+/*Search bar css*/
+.search-bar {
+  background-color: #333441;
+  color: #ffffff;
+  display: inline-block;
+  padding: 1% 0%;
+  text-align: center;
+  width: 100%; }
+  .search-bar .search {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0.4%;
+    width: 50%;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    border-radius: 35px; }
+    .search-bar .search input[type="text"] {
+      border: none;
+      height: 50px;
+      margin-left: 1%;
+      width: 76%;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      -ms-border-radius: 35px;
+      border-radius: 35px; }
+    .search-bar .search input[type="text"]:focus {
+      border: none;
+      outline: none; }
+    .search-bar .search button {
+      width: 22%; }
+  .search-bar span {
+    line-height: 57px; }
+
+/*Medium Layout*/
+@media (max-width: 800px) {
+  .search-bar .search {
+    background: none;
+    width: 90%; }
+    .search-bar .search input[type="text"] {
+      text-align: center;
+      width: 90%;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      -ms-border-radius: 35px;
+      border-radius: 35px; }
+    .search-bar .search button {
+      margin-top: 10px;
+      width: 90%; } }
+/*cell phone layout*/
+@media (min-width: 240px) and (max-width: 500px) {
+  button {
+    width: 90%; } }
+/*Grid Css*/
+.wrapper {
+  background-color: #383A49;
+  display: flow-root;
+  padding: 25px 45px 25px 80px; }
+  .wrapper .dummy {
+    padding: 40px 45px 40px 0px;
+    text-align: center; }
+    .wrapper .dummy img {
+      width: 15%; }
+    .wrapper .dummy .dummy-text {
+      color: #424453;
+      margin-top: 30px;
+      font-size: 180%; }
+  .wrapper ul {
+    list-style-type: none;
+    padding: 0; }
+    .wrapper ul li {
+      background-color: white;
+      color: #383A49;
+      cursor: pointer;
+      float: left;
+      font-weight: bold;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 2.5% 0 0;
+      min-width: 15%;
+      text-transform: uppercase;
+      text-align: center;
+      width: 46.5%;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      -ms-border-radius: 35px;
+      border-radius: 35px; }
+      .wrapper ul li hr {
+        display: none; }
+    .wrapper ul .active {
+      color: #d05d84; }
+      .wrapper ul .active hr {
+        background-color: #d05d84;
+        border: none;
+        display: block;
+        height: 2px;
+        width: 90%; }
+  .wrapper .albumBox:nth-child(n+13) {
+    display: none; }
+  .wrapper .artistBox:nth-child(n+13) {
+    display: none; }
+  .wrapper .box {
+    background-color: #444;
+    background-size: 100% 100% !important;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-size: 150%;
+    height: 300px;
+    margin-right: 2.5%;
+    margin-top: 50px;
+    position: relative;
+    width: 22%; }
+    .wrapper .box .overlay {
+      background-color: #383A49;
+      height: 100%;
+      opacity: 0.5;
+      position: absolute;
+      width: 100%; }
+    .wrapper .box .list {
+      position: absolute;
+      text-align: center;
+      top: 25%;
+      width: 100%; }
+      .wrapper .box .list img {
+        width: 50%; }
+    .wrapper .box .title {
+      background: #ffffff;
+      bottom: 0;
+      color: #2A2A33;
+      height: 21%;
+      line-height: 21%;
+      position: absolute;
+      text-align: left;
+      width: 100%; }
+      .wrapper .box .title span {
+        display: inline-block;
+        margin: 9% 0 9% 5%;
+        vertical-align: middle; }
+    .wrapper .box .icon {
+      margin-left: 6%;
+      position: absolute;
+      top: 75%;
+      transform: translateY(-75%); }
+      .wrapper .box .icon img {
+        width: 30px; }
+  .wrapper .more {
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 38%;
+    width: 20%; }
+
+/*Medium Layout*/
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 25px 36px 45px 80px; }
+    .wrapper ul li {
+      width: 90%;
+      margin: 3px 0 0 0; }
+      .wrapper ul li hr {
+        display: none; }
+    .wrapper ul .active {
+      background-color: #d05d84;
+      color: #ffffff; }
+      .wrapper ul .active hr {
+        display: none; }
+    .wrapper .box {
+      width: 44%;
+      float: left; }
+    .wrapper .more {
+      margin-left: 0;
+      width: 90%; } }
+/*small layout*/
+@media (min-width: 240px) and (max-width: 500px) {
+  .wrapper {
+    padding: 50px 45px 50px 12%; }
+    .wrapper ul li {
+      margin: 3px 0 0 0;
+      width: 95%; }
+    .wrapper .box {
+      float: left;
+      width: 95%; }
+    .wrapper .more {
+      margin-left: 0;
+      width: 95%; } }
+/*Popup css*/
+#fade-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  position: fixed;
+  width: 100vw; }
+
+.modal-dialog {
+  background-color: #ffffff;
+  color: #3A3B46;
+  left: 25%;
+  margin: 0 auto !important;
+  position: absolute;
+  top: 130vh;
+  width: 50% !important; }
+  .modal-dialog .modal-content {
+    margin-top: -20px; }
+    .modal-dialog .modal-content ul {
+      -webkit-padding-start: 6%; }
+  .modal-dialog .modal-header {
+    background-size: 100% 100% !important;
+    color: #ffffff;
+    height: 50vh;
+    position: relative;
+    text-align: center; }
+    .modal-dialog .modal-header .header-content {
+      float: left;
+      margin-left: 6%;
+      position: relative;
+      top: 75%; }
+    .modal-dialog .modal-header .close {
+      cursor: pointer;
+      float: right;
+      margin-top: 3%;
+      margin-right: 3%;
+      position: relative;
+      width: 30px; }
+  .modal-dialog .modal-title {
+    margin-left: 6%; }
+
+.service-list {
+  display: inline-block;
+  list-style-type: none;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  padding-left: 0px;
+  width: 100%; }
+  .service-list img {
+    float: left; }
+  .service-list p, .service-list h3 {
+    display: inline;
+    margin-left: 5%;
+    padding: 0;
+    text-align: left; }
+
+/*Medium Layout*/
+@media (max-width: 800px) {
+  .modal-dialog {
+    top: 127vh; }
+    .modal-dialog .modal-title {
+      margin: 13px 0px 0px 0px;
+      text-align: center; }
+    .modal-dialog .modal-content ul {
+      -webkit-padding-start: 8%; }
+
+  .service-list {
+    margin-bottom: 25px; }
+    .service-list img {
+      float: left;
+      margin-bottom: 5px;
+      width: 90%; }
+    .service-list p, .service-list h3 {
+      float: left;
+      margin: 0%;
+      text-align: center;
+      width: 90%; } }
+/*small layout*/
+@media (min-width: 240px) and (max-width: 500px) {
+  .modal-dialog .modal-title {
+    line-height: 60px; } }
+
+/*# sourceMappingURL=style.css.map */

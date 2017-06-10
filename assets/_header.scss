@@ -1,0 +1,47 @@
+/*Header Css*/
+.header{
+    background-color: $pink;
+    color: $white;  
+    padding-top: 25px;
+    text-align: center;
+
+    .top-icon{       
+        width:100%;
+
+        .right-icon{
+            float: right;
+            margin-right: 2%;
+        }
+        .left-icon{
+            float: left;
+            margin-left: 2%;
+        }
+    }
+    .center-img{
+        img{
+            width: 50%;
+        }
+    }
+    .arrow{
+        img{
+            height: 60px;
+        }
+    }
+}
+
+/*Medium Layout*/
+@media #{$medium}  {
+    .header{
+        .top-icon{ 
+            .right-icon,.left-icon{               
+                float:left;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*cell phone layout*/
+@media #{$small} {
+}

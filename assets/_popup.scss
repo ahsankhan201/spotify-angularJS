@@ -1,0 +1,112 @@
+/*Popup css*/
+
+#fade-wrapper {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+}
+.modal-dialog {  
+    background-color:$white;
+    color:$modal-text-color;
+    left: 25%;
+    margin: 0 auto !important;
+    position: absolute;
+    top: 130vh;
+    width: 50% !important;    
+
+    .modal-content{
+        margin-top:-20px;
+        
+        ul{
+            -webkit-padding-start: 6%;
+        }
+    }
+    .modal-header{
+        background-size:100% 100% !important;
+        color:$white;
+        height: 50vh;
+        position: relative;  
+        text-align:center;
+
+        .header-content{
+            float: left;
+            margin-left: 6%;
+            position: relative;
+            top: 75%;
+        }
+
+        .close{
+            cursor: pointer;
+            float: right;
+            margin-top: 3%;
+            margin-right: 3%;
+            position: relative;
+            width: 30px;
+        }
+    }    
+    .modal-title{
+        margin-left: 6%;
+    }
+}
+.service-list {
+    display: inline-block;
+    list-style-type: none;
+    margin-bottom: 20px;
+    margin-left:0px;
+    padding-left:0px;
+    width: 100%;    
+    img
+    {
+        float:left;
+    }
+    p,h3 {        
+        display:inline;
+        margin-left: 5%;
+        padding: 0;
+        text-align: left; 
+        
+    }
+}
+
+/*Medium Layout*/
+@media #{$medium}  {
+    .modal-dialog {
+        top: 127vh;
+        .modal-title{
+            margin: 13px 0px 0px 0px;
+            text-align: center;
+        }
+        .modal-content{
+            ul{
+                -webkit-padding-start: 8%;
+            }
+        }
+    }
+
+    .service-list {
+        margin-bottom: 25px;
+        
+        img
+        {
+            float:left;
+            margin-bottom: 5px;
+            width: 90%;            
+        }
+        p,h3 {            
+            float: left;
+            margin: 0%;
+            text-align: center;
+            width: 90%;            
+        }
+    }
+}
+
+/*small layout*/
+@media #{$small}  {
+    .modal-dialog {
+        .modal-title{
+            line-height: 60px;                
+        }
+    }
+}

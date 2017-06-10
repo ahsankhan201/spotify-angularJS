@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 29, 2017, 2:47:36 PM
+    Author     : ahsan
+*/
+$primary-color: #3fed00;
+$text-color: #fff;
+$light-black: #333441;
+$white: #ffffff;
+$pink: #d05d84;
+$dark-pink: #d04473;
+$dumy-text-color: #424453;
+$overlay-color:#383A49;
+$box-background-color: #444;
+$title-color: #2A2A33;
+$modal-wrapper-color: rgba(0, 0, 0, 0.5);
+$modal-text-color: #3A3B46;
+
+$large: "(min-width: 800px)";
+$medium: "(max-width: 800px)";
+$small: "(min-width: 240px) and (max-width: 500px)";
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+body{
+    margin: 0rem;
+
+    button{
+        background-color: $pink;
+        border: none;
+        color:$white;
+        font-weight: bold;
+        height: 50px;
+        min-width: 15%;
+        text-transform: uppercase;
+        @include border-radius(35px);      
+
+    }
+    button:focus{     
+        background-color: $dark-pink;
+        
+        outline: none;
+    }
+    button:hover{
+        background-color: $dark-pink;
+    }
+
+}
+
+@import 'header';
+@import 'search';
+@import 'grid';
+@import 'popup';

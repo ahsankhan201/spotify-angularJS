@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+    <head>
+        <title>angular-spotify demo!</title>
+
+        <link rel="stylesheet" href="../public/style.css"/>
+    </head>
+    <body ng-controller="MainController">
+
+        <!-- header view -->
+        <div class="header">
+            <div class="top-icon">
+                <span class="right-icon">
+                    Power By Spotify 
+                </span>
+                <span class="left-icon">
+                    <img src="../public/img/gl-logo@2x.png" style="width:80px; height:80px"/>
+                </span>
+
+            </div>
+            <div class="center-img">
+                <img src="../public/img/hero-img@2x.png"/>
+            </div>
+            <div class="arrow">
+                <img src="../public/img/PageAerow@2x.png"/> 
+            </div>
+        </div>
+        <!-- /header view -->
+        <!-- search bar-->
+        <div class="search-bar">
+            <div class="search">
+                <input type="text" ng-model="searchData" placeholder="Search for artist or album title">
+                <button class="search-button" ng-click ="searchResult()">Search</button>
+            </div>
+        </div>
+        <!--  /search bar-->
+        <!-- grid view -->
+        <div class="wrapper" ng-if="result == false" ng-hide="result">
+            <div class="dummy">
+                <img src="../public/img/Magnify@2x.png" />
+                <div class="dummy-text">
+                    Your results will appear here
+                </div>
+            </div>
+        </div>
+        <!--        <div class="wrapper" id="wraper" ng-hide="result == false">            -->
+        <div class="wrapper" id="wraper" ng-if="result == true">
+            <ul class="nav nav-pills">
+                <li ng-class="{active:isSet('artist')}" ng-click="setTab('artist');
+                            closePopup();">Artists<hr/></li>
+
+                <li ng-class="{active:isSet('album')}" ng-click="setTab('album');
+                            closePopup();">Albums<hr/></li>
+
+            </ul>   
+            <div id="albumDiv">
+                <div ng-repeat="album in albumResult"
+                     ng-click="searchChild(album);"
+                     ng-mouseenter="layer = true" ng-mouseleave="layer = false"
+                     ng-show="isSet('album')" class="box albumBox"                      
+                     style="background:url({{album.images[0].url}});">                    
+                    <a href="#wraper">
+                        <div class="overlay" ng-hide="layer"></div>
+
+                        <div class="list" ng-show="layer"> 
+                            <img src="../public/img/Bitmap@2x.png" alt="Details"/>
+                        </div>
+
+                        <div class="title">
+                            <span>  {{ album.name | limitTo:22 }}</span>
+                        </div>
+
+                        <span class="icon">
+                            <img src="../public/img/album-icon@2x.png" alt="image"/> 
+                        </span> 
+                    </a>
+                </div>            
+            </div>
+            <div id="artistDiv">
+                <div ng-repeat="item in artistResult"
+                     ng-click="searchChild(item);"
+                     ng-mouseenter="layer = true" ng-mouseleave="layer = false"
+                     ng-show="isSet('artist')" class="box artistBox" 
+                     style="background:url({{item.images[0].url}});">
+                    <a href="#wraper">
+                        <div class="overlay" ng-hide="layer"></div>
+
+                        <div class="list" ng-show="layer"> 
+                            <img src="../public/img/Bitmap@2x.png" alt="Details"/>
+                        </div>
+
+                        <div class="title">
+                            <span>  {{ item.name | limitTo:22 }}</span>
+                        </div>
+
+                        <span class="icon">
+                            <img src="../public/img/artist-icon@2x.png" alt="image"/> 
+                        </span> 
+                    </a>
+                </div> 
+            </div>
+            <button class="more" ng-click="moreData();" ng-hide="result == false">SHOW ME MORE!</button>
+        </div> 
+        <!-- /grid view -->
+        <!-- footer -->
+        <div class="search-bar">
+            <span>
+                Design by Ahsan Khan - Powered by Spotify
+            </span>
+        </div>
+
+        <script src="../src/jquery-3.2.1.min.js"></script>
+        <script src="../node_modules/angular/angular.min.js"></script>
+        <script src="../src/angular-spotify.js"></script>
+        <script data-require="ui-bootstrap@*" data-semver="0.12.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+        <script src="main.controller.js"></script>
+    </body>
+</html>

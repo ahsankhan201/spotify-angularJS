@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <script>
+   window.onload = function () {
+      var hash = window.location;
+      alert(window.location);
+      if (window.location.search.substring(1).indexOf("error") !== -1) {
+          alert(window.location);
+        //window.close();
+      } else if (hash) {
+        var token = window.location.hash.split('#')[1].split('=')[1].split('&')[0];
+        localStorage.setItem('spotify-token', token);        
+      }
+      alert(hash);
+      //window.close();
+    };
+  </script>
+</head>
+<body>
+
+</body>
+</html>
